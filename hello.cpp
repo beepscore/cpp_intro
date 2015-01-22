@@ -31,6 +31,16 @@ int main() {
         cout << "You can drive" << endl;
     }
 
+        string numberGuessed;
+        int intNumberGuessed;
+
+    do {
+        cout << "Guess between 1 and 10: ";
+        getline(cin, numberGuessed);
+        intNumberGuessed = stoi(numberGuessed);
+    } while (intNumberGuessed != 4);
+
+        cout << "You win!" << endl;
     return 0;
 }
 
