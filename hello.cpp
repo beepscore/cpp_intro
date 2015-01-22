@@ -119,6 +119,23 @@ int appendToFile() {
     return 0;
 }
 
+int readAFile() {
+    ifstream reader("stevequote.txt");
+    char letter;
+    if (!reader) {
+        cout << "Error reading file" << endl;
+        return -1;
+    } else {
+        for (int i = 0; !reader.eof(); i++) {
+            reader.get(letter);
+            cout << letter;
+        }
+        cout << endl;
+        reader.close();
+    }
+    return 0;
+}
+
 int main() {
     useVariables();
     driving();
@@ -133,6 +150,7 @@ int main() {
 
     writeAFile();
     appendToFile();
+    readAFile();
 
     return 0;
 }
