@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int main() {
+void useVariables() {
     // Output a message.
     cout << "Hello, welcome to C++" << endl;
 
@@ -20,8 +20,9 @@ int main() {
     cout << "Size of int " << sizeof(myAge) << endl;
 
     float favNum = 3.141592;
+}
 
-
+void driving() {
     int age = 70;
     int ageAtLastExam = 16;
     bool isNotIntoxicated = true;
@@ -33,7 +34,9 @@ int main() {
     } else {
         cout << "You can drive" << endl;
     }
+}
 
+void guessNumber() {
         string numberGuessed;
         int intNumberGuessed;
 
@@ -44,8 +47,9 @@ int main() {
     } while (intNumberGuessed != 4);
 
         cout << "You win!" << endl;
+}
 
-
+void happyBirthday() {
     // c uses array of char to make a string
     char happyArray[6] = {'H', 'a', 'p', 'p', 'y', '\0'};
 
@@ -53,7 +57,9 @@ int main() {
     string birthdayString = " Birthday";
 
     cout << happyArray + birthdayString << endl;
+}
 
+void lottery() {
     int lotteryNumArray[5] = {4, 13, 14, 24, 34};
     // vector. similar to array, but can change the length
     vector <int> lotteryNumVect(10);
@@ -63,7 +69,26 @@ int main() {
 
     lotteryNumVect.insert(lotteryNumVect.begin()+5, 44);
     cout << lotteryNumVect.at(2) << endl;
+}
 
+int addNumbers(int firstNum, int secondNum = 0) {
+    return firstNum + secondNum;
+}
+
+// can overload function same name different arguments
+int addNumbers(int firstNum, int secondNum, int thirdNum) {
+    return firstNum + secondNum + thirdNum;
+}
+
+int main() {
+    useVariables();
+    driving();
+    guessNumber();
+    happyBirthday();
+    lottery();
+
+    cout << addNumbers(2, 3) << endl;
+    cout << addNumbers(2, 3, 7) << endl;
 
     return 0;
 }
