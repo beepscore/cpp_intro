@@ -1,6 +1,7 @@
 # include <iostream>
 # include <string>
 # include <vector>
+# include <fstream>
 
 using namespace std;
 
@@ -92,10 +93,36 @@ int getFactorial(int number) {
     return factorial;
 }
 
+int writeAFile() {
+    string steveQuote = "A day without sunshine is like, you know, night";
+    ofstream writer("stevequote.txt");
+    if (!writer) {
+        cout << "Error opening file" << endl;
+        return -1;
+    } else {
+        writer << steveQuote << endl;
+        writer.close();
+    }
+    return 0;
+}
+
+int appendToFile() {
+    // append
+    ofstream writer("stevequote.txt", ios::app);
+    if (!writer) {
+        cout << "Error opening file" << endl;
+        return -1;
+    } else {
+        writer << "\n - Steve Martin" << endl;
+        writer.close();
+    }
+    return 0;
+}
+
 int main() {
     useVariables();
     driving();
-    guessNumber();
+    // guessNumber();
     happyBirthday();
     lottery();
 
@@ -103,6 +130,9 @@ int main() {
     cout << addNumbers(2, 3, 7) << endl;
 
     cout << getFactorial(7) << endl;
+
+    writeAFile();
+    appendToFile();
 
     return 0;
 }
