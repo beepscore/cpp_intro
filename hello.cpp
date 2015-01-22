@@ -80,6 +80,18 @@ int addNumbers(int firstNum, int secondNum, int thirdNum) {
     return firstNum + secondNum + thirdNum;
 }
 
+// recursive
+int getFactorial(int number) {
+    int factorial = 0;
+
+    if (number == 1) {
+        factorial = 1;
+    } else {
+        factorial = number * getFactorial(number - 1);
+    }
+    return factorial;
+}
+
 int main() {
     useVariables();
     driving();
@@ -89,6 +101,8 @@ int main() {
 
     cout << addNumbers(2, 3) << endl;
     cout << addNumbers(2, 3, 7) << endl;
+
+    cout << getFactorial(7) << endl;
 
     return 0;
 }
