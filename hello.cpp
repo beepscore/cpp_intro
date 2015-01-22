@@ -1,4 +1,7 @@
 # include <iostream>
+# include <string>
+# include <vector>
+
 using namespace std;
 
 int main() {
@@ -50,6 +53,17 @@ int main() {
     string birthdayString = " Birthday";
 
     cout << happyArray + birthdayString << endl;
+
+    int lotteryNumArray[5] = {4, 13, 14, 24, 34};
+    // vector. similar to array, but can change the length
+    vector <int> lotteryNumVect(10);
+    // insert first three elements of array into vector
+    lotteryNumVect.insert(lotteryNumVect.begin(), lotteryNumArray,
+            lotteryNumArray+3);
+
+    lotteryNumVect.insert(lotteryNumVect.begin()+5, 44);
+    cout << lotteryNumVect.at(2) << endl;
+
 
     return 0;
 }
