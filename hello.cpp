@@ -41,6 +41,16 @@ int main() {
     } while (intNumberGuessed != 4);
 
         cout << "You win!" << endl;
+
+
+    // c uses array of char to make a string
+    char happyArray[6] = {'H', 'a', 'p', 'p', 'y', '\0'};
+
+    // c++ has string object
+    string birthdayString = " Birthday";
+
+    cout << happyArray + birthdayString << endl;
+
     return 0;
 }
 
