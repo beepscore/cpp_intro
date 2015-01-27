@@ -8,17 +8,20 @@
 
 using namespace std;
 
+string intToString(int an_int) {
+    // convert int to string
+    stringstream ss;
+    ss << an_int;
+    return ss.str();
+}
+
 void useRefs() {
     int myNum = 6;
     int& myNumRef = myNum;
     myNumRef = 17;
     string message = "myNum == ";
 
-    // convert int to string
-    stringstream ss;
-    ss << myNum;
-    string myNumStr = ss.str();
-    cout << "myNum == " + myNumStr << endl;
+    cout << "myNum == " + intToString(myNum) << endl;
 }
 
 void usePointers() {
