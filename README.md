@@ -10,6 +10,11 @@ Magpi (Raspberry Pi)
 <http://www.themagpi.com/issue/issue-7/article/welcome-to-the-c-cache/>
 <http://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html>
 
+https://isocpp.org/wiki/faq/newbie
+
+Learning C++ if you already know Objective-C
+https://isocpp.org/wiki/faq/objective-c
+
 # Results
 
 ## compile
