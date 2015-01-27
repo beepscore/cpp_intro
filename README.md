@@ -1,5 +1,5 @@
 # Purpose
-Record info about compiling and running C++.
+Record info about C++.
 
 # References
 C++ programming
@@ -27,6 +27,7 @@ Works on OS X, linux or windows.
 
 Compiles and links an executable file named hello.
 
+## run
 To run from this directory
 
     ./hello
@@ -36,4 +37,21 @@ this isn't quite right throws error
     g++ -std=c++11 hello.cpp
     ./a.out
 
+## C++ vs C
+C_++ is object oriented.
+Has string class.
 
+### int to string
+sprintf() C function is available in C++, but in general when working in C++ prefer to use it.
+No standard C++ function converts int to string.
+Can write a function to do this.
+sstream is a very compiler-portable way to convert int to string.
+
+### references vs pointers
+https://en.wikipedia.org/wiki/Reference_%28C%2B%2B%29
+http://stackoverflow.com/questions/7058339/c-when-to-use-references-vs-pointers
+http://www.thegeekstuff.com/2013/05/cpp-reference-variable/
+
+C uses pointers.
+C++ has references. Prefer to pointers, they are safer.
+Sometimes need to use pointers for additional power.
