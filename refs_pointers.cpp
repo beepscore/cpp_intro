@@ -19,12 +19,16 @@ void useRefs() {
     int myNum = 6;
     int& myNumRef = myNum;
     myNumRef = 17;
-    string message = "myNum == ";
 
     cout << "myNum == " + intToString(myNum) << endl;
 }
 
 void usePointers() {
+    int myNum = 6;
+    int* myNumPtr = &myNum;
+    *myNumPtr = 17;
+
+    cout << "myNum == " + intToString(myNum) << endl;
 }
 
 int main() {
