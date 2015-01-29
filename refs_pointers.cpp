@@ -25,10 +25,21 @@ void useRefs() {
 
 void usePointers() {
     int myNum = 6;
+    cout << "myNum == " << myNum << endl;
+    cout << "myNum == " + intToString(myNum) << endl;
+
     int* myNumPtr = &myNum;
     *myNumPtr = 17;
+    cout << "myNumPtr address == " << myNumPtr  << endl;
+    cout << "myNumPtr value == " << *myNumPtr << endl;
 
-    cout << "myNum == " + intToString(myNum) << endl;
+    int myArray[5] = {4, 13, 14, 24, 34};
+    int* myArrayPtr = myArray;
+    cout << "myArrayPtr address == " << myArrayPtr << endl;
+    cout << "myArrayPtr value == " << *myArrayPtr << endl;
+
+    cout << "myArray[1] address == " << &myArray[1] << endl;
+    cout << "++myArrayPtr address == " << ++myArrayPtr << endl;
 }
 
 int main() {
