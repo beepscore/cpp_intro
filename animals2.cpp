@@ -22,6 +22,17 @@ class Dog2 : public Animal2{
         }
 };
 
+class GermanShepard : public Dog2{
+    public:
+        void getClass() {
+            cout << "I'm a German Shepard" << endl;
+        }
+
+        void getDerived() {
+            cout << "I'm an Animal and Dog" << endl;
+        }
+};
+
 void whatClassAreYou(Animal2 *animal) {
     animal -> getClass();
 }
@@ -38,6 +49,20 @@ int main() {
     dog -> getClass();
 
     whatClassAreYou(dog);
+
+    Dog2 spot;
+    GermanShepard max;
+
+    Animal2* dog2Ptr = &spot;
+    Animal2* germanShepardPtr = &max;
+
+    dog2Ptr -> getFamily();
+    germanShepardPtr -> getFamily();
+
+    // polymorphism example- calling the same method name on these Animal2 instances
+    // calls the most specific implementation
+    dog2Ptr -> getClass();
+    germanShepardPtr -> getClass();
 
     return 0;
 }
