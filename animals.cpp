@@ -21,7 +21,10 @@ int main() {
 
     Dog spot(38, 16, "Spot", "Woof");
     cout << spot.getSound() << endl;
+
+    // call Dog method toString
     cout << spot.toString() << endl;
+    // call Animal method toString. Use scope operator :: to call the superclass method
     cout << spot.Animal::toString() << endl;
 
     cout << "Number of animals " << Animal::getNumOfAnimals() << endl;
