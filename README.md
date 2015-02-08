@@ -47,11 +47,3 @@ No standard C++ function converts int to string.
 Can write a function to do this.
 sstream is a very compiler-portable way to convert int to string.
 
-### references vs pointers
-https://en.wikipedia.org/wiki/Reference_%28C%2B%2B%29
-http://stackoverflow.com/questions/7058339/c-when-to-use-references-vs-pointers
-http://www.thegeekstuff.com/2013/05/cpp-reference-variable/
-
-C uses pointers.
-C++ has references. Prefer to pointers, they are safer.
-Sometimes need to use pointers for additional power.

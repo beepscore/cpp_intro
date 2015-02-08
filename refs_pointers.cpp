@@ -2,6 +2,11 @@
 # include <sstream>
 # include <string>
 
+// references vs pointers
+// C uses pointers.
+// C++ has references. Prefer to pointers, they are safer.
+// Sometimes need to use pointers for additional power.
+
 // https://en.wikipedia.org/wiki/Reference_%28C%2B%2B%29
 // http://stackoverflow.com/questions/7058339/c-when-to-use-references-vs-pointers
 // http://www.thegeekstuff.com/2013/05/cpp-reference-variable/
@@ -16,6 +21,7 @@ string intToString(int an_int) {
 }
 
 void useRefs() {
+    // reference must be declared and set to an initial value.
     int myNum = 6;
     int& myNumRef = myNum;
     myNumRef = 17;
@@ -24,7 +30,9 @@ void useRefs() {
 }
 
 void usePointers() {
-    int myNum = 6;
+    // you can declare a pointer without setting a value, then set value later
+    int myNum;
+    myNum = 6;
     cout << "myNum == " << myNum << endl;
     cout << "myNum == " + intToString(myNum) << endl;
 
