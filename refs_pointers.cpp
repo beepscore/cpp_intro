@@ -5,11 +5,13 @@
 // references vs pointers
 // C uses pointers.
 // C++ has references. Prefer to pointers, they are safer.
+// reference is guaranteed to be nonzero.
 // Sometimes need to use pointers for additional power.
 
 // https://en.wikipedia.org/wiki/Reference_%28C%2B%2B%29
 // http://stackoverflow.com/questions/7058339/c-when-to-use-references-vs-pointers
 // http://www.thegeekstuff.com/2013/05/cpp-reference-variable/
+// http://stackoverflow.com/questions/728233/why-are-references-not-reseatable-in-c%E2%80%8C%E2%80%8B
 
 using namespace std;
 
@@ -20,22 +22,14 @@ string intToString(int an_int) {
     return ss.str();
 }
 
-void useRefs() {
-    cout << "useRefs()" << endl;
+void describePointerArgument(int* ptrArg) {
+    cout << "describePointerArgument()" << endl;
+    cout << "*ptrArg == " + intToString(*ptrArg) << endl;
+}
 
-    int myNum;
-    // reference variable must be initialized when declared
-    // e.g. this won't work
-    //int& myNumRef
-    int& myNumRef = myNum;
-
-    myNum = 6;
-    cout << "myNum == " + intToString(myNum) << endl;
-    cout << "myNumRef == " + intToString(myNumRef) << endl;
-
-    myNumRef = 17;
-    cout << "myNum == " + intToString(myNum) << endl;
-    cout << "myNumRef == " + intToString(myNumRef) << endl;
+void describeReferenceArgument(int& refArg) {
+    cout << "describeReferenceArgument()" << endl;
+    cout << "refArg == " + intToString(refArg) << endl;
 }
 
 void usePointers() {
@@ -58,6 +52,28 @@ void usePointers() {
 
     cout << "myArray[1] address == " << &myArray[1] << endl;
     cout << "++myArrayPtr address == " << ++myArrayPtr << endl;
+
+    describePointerArgument(myNumPtr);
+}
+
+void useRefs() {
+    cout << "useRefs()" << endl;
+
+    int myNum;
+    // reference variable must be initialized when declared
+    // e.g. this won't work
+    //int& myNumRef;
+    int& myNumRef = myNum;
+
+    myNum = 6;
+    cout << "myNum == " + intToString(myNum) << endl;
+    cout << "myNumRef == " + intToString(myNumRef) << endl;
+
+    myNumRef = 17;
+    cout << "myNum == " + intToString(myNum) << endl;
+    cout << "myNumRef == " + intToString(myNumRef) << endl;
+
+    describeReferenceArgument(myNumRef);
 }
 
 int main() {
