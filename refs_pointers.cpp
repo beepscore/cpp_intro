@@ -21,15 +21,25 @@ string intToString(int an_int) {
 }
 
 void useRefs() {
-    // reference must be declared and set to an initial value.
-    int myNum = 6;
-    int& myNumRef = myNum;
-    myNumRef = 17;
+    cout << "useRefs()" << endl;
 
+    int myNum;
+    // reference variable must be initialized when declared
+    // e.g. this won't work
+    //int& myNumRef
+    int& myNumRef = myNum;
+
+    myNum = 6;
     cout << "myNum == " + intToString(myNum) << endl;
+    cout << "myNumRef == " + intToString(myNumRef) << endl;
+
+    myNumRef = 17;
+    cout << "myNum == " + intToString(myNum) << endl;
+    cout << "myNumRef == " + intToString(myNumRef) << endl;
 }
 
 void usePointers() {
+    cout << "usePointers()" << endl;
     // you can declare a pointer without setting a value, then set value later
     int myNum;
     myNum = 6;
