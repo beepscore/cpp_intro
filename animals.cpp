@@ -1,6 +1,7 @@
 # include <iostream>
 # include <string>
-# include "animal.cpp"
+//# include "animal.cpp"
+# include "dog.cpp"
 //# include "string_utils.cpp"
 
 using namespace std;
@@ -17,6 +18,13 @@ int main() {
 
     Animal tom(36, 15, "Tom");
     cout << tom.toString() << endl;
+
+    Dog spot(38, 16, "Spot", "Woof");
+    cout << spot.getSound() << endl;
+    cout << spot.toString() << endl;
+    cout << spot.Animal::toString() << endl;
+
+    cout << "Number of animals " << Animal::getNumOfAnimals() << endl;
 
     return 0;
 }
