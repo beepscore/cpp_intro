@@ -1,6 +1,7 @@
 # include <iostream>
 # include <sstream>
 # include <string>
+# include "string_utils.cpp"
 
 // references vs pointers
 // C uses pointers.
@@ -14,13 +15,6 @@
 // http://stackoverflow.com/questions/728233/why-are-references-not-reseatable-in-c%E2%80%8C%E2%80%8B
 
 using namespace std;
-
-string intToString(int an_int) {
-    // convert int to string
-    stringstream ss;
-    ss << an_int;
-    return ss.str();
-}
 
 void describePointerArgument(int* ptrArg) {
     cout << "describePointerArgument()" << endl;
