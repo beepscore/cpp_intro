@@ -38,7 +38,7 @@ this isn't quite right throws error
     ./a.out
 
 ## C++ vs C
-C_++ is object oriented.
+C++ is object oriented.
 Has string class.
 
 ### int to string
