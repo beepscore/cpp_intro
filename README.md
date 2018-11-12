@@ -18,12 +18,19 @@ https://isocpp.org/wiki/faq/objective-c
 # Results
 
 ## compile
-To compile C use gcc.
 
-To compile C++ use g++.
-Works on OS X, linux or windows.
+### c
+To compile C use gcc or clang
+
+### c++
+To compile C++ use g++ or clang++.
+g++ works on OS X, linux or windows.
 
     g++ -o hello hello.cpp
+
+or
+
+    clang++ -o hello hello.cpp
 
 Compiles and links an executable file named hello.
 
