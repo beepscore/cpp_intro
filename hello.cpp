@@ -48,13 +48,15 @@ void driving() {
 
 void guessNumber() {
         string numberGuessed;
-        int intNumberGuessed;
+        int numberGuessedInt;
 
     do {
         cout << "Guess between 1 and 10: ";
         getline(cin, numberGuessed);
-        intNumberGuessed = stoi(numberGuessed);
-    } while (intNumberGuessed != 4);
+        // stoi string to int
+        // stod string to double
+        numberGuessedInt = stoi(numberGuessed);
+    } while (numberGuessedInt != 4);
 
         cout << "You win!" << endl;
 }
