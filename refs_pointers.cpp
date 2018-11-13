@@ -28,16 +28,23 @@ void describeReferenceArgument(int& refArg) {
 
 void usePointers() {
     cout << "usePointers()" << endl;
-    // you can declare a pointer without setting a value, then set value later
+    // you can declare a variable without setting a value, then set value later
     int myNum;
     myNum = 6;
     cout << "myNum == " << myNum << endl;
     cout << "myNum == " + intToString(myNum) << endl;
 
+    // &myNum, the address of myNum
+    cout << "&myNum == " << &myNum  << endl;
+
+    // myNumPtr contains &myNum, the address of myNum
     int* myNumPtr = &myNum;
+    cout << "myNumPtr == " << myNumPtr  << endl;
+
+    // dereference pointer
     *myNumPtr = 17;
-    cout << "myNumPtr address == " << myNumPtr  << endl;
-    cout << "myNumPtr value == " << *myNumPtr << endl;
+    cout << "*myNumPtr == " << *myNumPtr << endl;
+    cout << "myNum == " << myNum << endl;
 
     int myArray[5] = {4, 13, 14, 24, 34};
     int* myArrayPtr = myArray;
