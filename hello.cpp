@@ -2,14 +2,20 @@
 # include <string>
 # include <vector>
 # include <fstream>
+# include <cmath>
 
 using namespace std;
 
 void useVariables() {
     // Output a message.
+    // character output, display a stream of characters
     cout << "Hello, welcome to C++" << endl;
 
+    // example define a constant
     const double PI = 3.1415926536;
+    cout << "PI " << PI << endl;
+    // Note cmath already defines M_PI
+    cout << "M_PI " << M_PI << endl;
 
     char myGrade = 'A';
 
