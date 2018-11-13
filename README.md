@@ -40,7 +40,7 @@ To run from this directory
     ./hello
 
 ### alternatively
-this isn't quite right throws error
+
     g++ -std=c++11 hello.cpp
     ./a.out
 
