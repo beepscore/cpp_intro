@@ -26,6 +26,8 @@ void useVariables() {
     // int size is 4 bytes
     cout << "Size of int " << sizeof(myAge) << endl;
 
+    cout << "INT_MAX " << INT_MAX << endl;
+
     float favNum = 3.141592;
 }
 
