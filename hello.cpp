@@ -88,11 +88,23 @@ void lottery() {
     cout << lotteryNumVect.at(2) << endl;
 }
 
+/**
+    overload name addNumbers, two arguments
+    @param firstNum:
+    @param secondNum:
+    @return sum of the arguments
+*/
 int addNumbers(int firstNum, int secondNum = 0) {
     return firstNum + secondNum;
 }
 
-// can overload function same name different arguments
+/**
+    overload name addNumbers, three arguments
+    @param firstNum:
+    @param secondNum:
+    @param thirdNum:
+    @return sum of the arguments
+*/
 int addNumbers(int firstNum, int secondNum, int thirdNum) {
     return firstNum + secondNum + thirdNum;
 }
@@ -111,6 +123,7 @@ int getFactorial(int number) {
 
 int writeAFile() {
     string steveQuote = "A day without sunshine is like, you know, night";
+    // http://www.cplusplus.com/reference/fstream/ofstream/ofstream/
     ofstream writer("stevequote.txt");
     if (!writer) {
         cout << "Error opening file" << endl;
@@ -123,7 +136,8 @@ int writeAFile() {
 }
 
 int appendToFile() {
-    // append
+    // ios::app input-output stream append
+    // http://www.codebind.com/cpp-tutorial/c-create-text-file-write/
     ofstream writer("stevequote.txt", ios::app);
     if (!writer) {
         cout << "Error opening file" << endl;
