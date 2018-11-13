@@ -70,6 +70,8 @@ void happyBirthday() {
 
     // c++ has string object
     string birthdayString = " Birthday";
+    cout << "typeid(birthdayString) " << typeid(birthdayString).name() << endl;
+    // typeid(birthdayString) NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 
     cout << happyArray + birthdayString << endl;
 }
