@@ -64,6 +64,9 @@ void guessNumber() {
 void happyBirthday() {
     // c uses array of char to make a string
     char happyArray[6] = {'H', 'a', 'p', 'p', 'y', '\0'};
+    cout << "typeid(happyArray) " << typeid(happyArray).name() << endl;
+    // typeid(happyArray) A6_c
+    // i.e. array of char, length 6
 
     // c++ has string object
     string birthdayString = " Birthday";
