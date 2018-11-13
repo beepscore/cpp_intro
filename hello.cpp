@@ -17,6 +17,7 @@ void useVariables() {
     // Note cmath already defines M_PI
     cout << "M_PI " << M_PI << endl;
 
+    // In c++ char delimiter is ', string delimiter is "
     char myGrade = 'A';
 
     // char size is 1 byte
