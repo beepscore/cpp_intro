@@ -123,6 +123,8 @@ int getFactorial(int number) {
 
 int writeAFile() {
     string steveQuote = "A day without sunshine is like, you know, night";
+    // call output file stream constructor, name the instance "writer"
+    // https://www.learncpp.com/cpp-tutorial/85-constructors/
     // http://www.cplusplus.com/reference/fstream/ofstream/ofstream/
     ofstream writer("stevequote.txt");
     if (!writer) {
@@ -150,6 +152,7 @@ int appendToFile() {
 }
 
 int readAFile() {
+    // call input file stream constructor, name the instance "reader"
     ifstream reader("stevequote.txt");
     char letter;
     if (!reader) {
